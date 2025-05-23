@@ -1,16 +1,9 @@
-import { signIn } from "@/auth";
-
-const Home = async () => {
+"use client";
+import { signIn } from "next-auth/react";
+const Home = () => {
   return (
     <div>
-      <form
-        action={async () => {
-          "use server";
-          await signIn("github");
-        }}
-      >
-        <button type="submit">Signin with GitHub</button>
-      </form>
+      <button onClick={() => signIn("github")}>Signin with GitHub</button>
     </div>
   );
 };
