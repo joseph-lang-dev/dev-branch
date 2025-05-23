@@ -2,7 +2,7 @@
 import { Container } from "@/components/container";
 import { signIn, useSession, signOut } from "next-auth/react";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -48,7 +48,6 @@ export const Header = () => {
                   <DropdownMenuTrigger className="focus:outline-none">
                     <Avatar className="w-[50px] h-[50px]">
                       <AvatarImage src={data?.user?.image || ""} />
-                      <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
